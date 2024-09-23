@@ -46,3 +46,34 @@ const director1: Directors = {
   }
 
   console.log(printTeacher("Dark", "Soso"));
+
+
+
+interface StudentClassInterface {
+    
+    firstName: string,
+    lastName: string;
+    workOnHomework(): string,
+    displayName(): string,
+
+
+
+}
+  class StudentClass implements StudentClassInterface {
+    firstName: string;
+    lastName: string;
+    constructor(firstName: string, lastName: string){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    workOnHomework(){
+         return "Currently working";
+    }
+
+    displayName(){
+        return this.firstName;
+    }
+  }
+
+  const studClass1 = new StudentClass("C24", "LaTeam");
+  console.log(studClass1); 
